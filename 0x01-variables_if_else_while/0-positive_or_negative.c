@@ -4,8 +4,7 @@
 
 
 /**
- * main - Determines if a number is positive, negative or equals to zero..
- * 
+ * main - Determines if a number is positive, negative or equals to zero.
  * Return : Always 0 (Success)
  */
 
