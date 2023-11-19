@@ -6,26 +6,25 @@
  * print_numbers - function that prints numbers
  * @seperator: string
  * @n: size
+ * Return: 0
  */
 
 void print_numbers(const char *seperator, const unsigned int n, ...)
 {
-	unsigned int a;
+	unsigned int i;
+	va_list pa;
 
-	va_list args;
+	va_start(pa, n);
 
-	va_start(args, n);
+	if (seperator == NULL)
+		separator = "";
 
-	for (a = 0; a < n; a++)
+	for (i = 0; i < n; i++)
 	{
-		num = va_arg(args, int);
-		printf("%d", num);
-
-		if (seperator != NULL && a != (n - 1))
+		printf("%d%", va_arg(pa, int));
+		if (i < n - 1)
 			printf("%s", seperator);
 	}
-
-	printf('\n');
-	va_end(args);
+	printf("\n");
+	va_end(pa);
 }
-
