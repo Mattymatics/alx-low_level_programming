@@ -19,6 +19,19 @@ typedef struct listint_s
 
 } listint_t;
 
+/**
+ * struct listnode_s - linked list
+ * @ptr: address of listint_t
+ * @next: points to the node
+ * description: singly linked list node
+ */
+
+typedef struct listnode_s
+{
+	listint_t *ptr;
+	struct listnode_s *next;
+} listnode_t;
+
 int _putchar(char c);
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
@@ -34,6 +47,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
 size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
-listint_t *find_listint_loop(listint_t *head);
+listint_t *find_listiint_loop(listint_t *head);
+int is_in_nodes(listnode_t *head, const listint_t *ptr);
+void free_listnode(listnode_t *head);
+listnode_t *add_nodeptr(listnode_t **head, const listint_t *ptr);
 
 #endif
