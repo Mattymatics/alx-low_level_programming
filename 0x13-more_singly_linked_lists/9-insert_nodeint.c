@@ -6,6 +6,7 @@
  * @head: pointer to linked lists
  * @idx: index of the list
  * @n: value
+ *
  * Return: address of new node
  */
 
